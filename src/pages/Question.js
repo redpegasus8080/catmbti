@@ -4,7 +4,6 @@ import { ProgressBar, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { QuestionData } from '../assets/data/questiondata';
 
-
 const Question = () => {
     const [questionNo, setQuestionNo] = React.useState(0);
     const [totalScore, setTotalScore] = React.useState([
