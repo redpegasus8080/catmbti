@@ -6,7 +6,7 @@ const KakaoShareButton = ({data}) => {
     const url = "https://catmbti0424.netlify.app/";
     const resultUrl = window.location.href;
 
-    console.log('ddd', resultUrl, url);
+    console.log('data', data);
 
     React.useEffect(() => {
         Kakao.cleanup();
@@ -19,20 +19,19 @@ const KakaoShareButton = ({data}) => {
             objectType: 'feed',
             content: {
                 title: 'MBTI',
-                description: 'MBTI TEST DESCRIPTION',
-                imageUrl:
-                    'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+                description: `MBTI TEST DESCRIPTION ${data.name} 입니다.`,
+                imageUrl: url + data.image,
                 link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                    webUrl: 'https://developers.kakao.com',
+                    mobileWebUrl: resultUrl,
+                    webUrl: resultUrl,
                 },
             },
             buttons: [
                 {
                     title: '나도 테스트 하러가기',
                     link: {
-                    mobileWebUrl: url,
-                    webUrl: url,
+                        mobileWebUrl: url,
+                        webUrl: url,
                     },
                 },
             ],
