@@ -14,13 +14,14 @@ const KakaoShareButton = ({data}) => {
         Kakao.isInitialized();
     }, []);
 
+    
     const shareKakao = () => {
         Kakao.Share.sendDefault({
             objectType: 'feed',
             content: {
                 title: 'MBTI',
                 description: `MBTI TEST DESCRIPTION ${data.name} 입니다.`,
-                imageUrl: url + data.image,
+                imageUrl: data.image,
                 link: {
                     mobileWebUrl: resultUrl,
                     webUrl: resultUrl,
