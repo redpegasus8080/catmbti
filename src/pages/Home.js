@@ -1,7 +1,7 @@
 import React from 'react';
 // css-in-js
 import styled from 'styled-components';
-import PangImage from '../assets/darkSky.jpg';
+import PangImage from '../assets/pegasus_paper.jpg';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
