@@ -3,8 +3,10 @@ import React from 'react';
 import styled from 'styled-components';
 // import PangImage from '../assets/darkSky.jpg';
 import Button from 'react-bootstrap/Button';
+import KakaoShareButton from '../component/KakaoShareButton';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ResultData } from '../assets/data/resultdata';
+// import { ButtonGroup } from 'react-bootstrap';
 
 const Result = () => {
     const navigate = useNavigate();
@@ -29,9 +31,12 @@ const Result = () => {
                     <img src={resultData.image} alt="" className="rounded-circle" width={350} height={350} />
                 </LogoImage>
                 <Desc>예비 결과 설명입니다. {resultData.best} / {resultData.name}  </Desc>
-                <Button style={{ fontFamily: "SimKyungha"}} onClick={() => navigate("/")}>
-                    테스트 다시하기
-                </Button>
+                <ButtonGroup>
+                    <Button style={{ fontFamily: "SimKyungha", width: 170 }} onClick={() => navigate("/")}>
+                        테스트 다시하기
+                    </Button>
+                    <KakaoShareButton data={resultData}/>
+                </ButtonGroup>
             </Contents>
         </Wrapper>
     )
@@ -73,4 +78,9 @@ const Desc = styled.div`
     font-size: 20pt;
     margin-top: 20px;
     font-family: "SimKyungha";
+`
+
+const ButtonGroup = styled.div`
+    display: flex;
+    flex-direction: row;
 `
