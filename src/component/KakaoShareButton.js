@@ -21,7 +21,7 @@ const KakaoShareButton = ({data}) => {
             content: {
                 title: 'MBTI',
                 description: `MBTI TEST DESCRIPTION ${data.name} 입니다.`,
-                imageUrl: data.image,
+                imageUrl: 'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
                 link: {
                     mobileWebUrl: resultUrl,
                     webUrl: resultUrl,
